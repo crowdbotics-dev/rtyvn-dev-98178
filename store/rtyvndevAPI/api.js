@@ -8,24 +8,6 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
-function api_v1_hncnc_list(payload) {
-  return rtyvndevAPI.get(`/api/v1/hncnc/`)
-}
-function api_v1_hncnc_create(payload) {
-  return rtyvndevAPI.post(`/api/v1/hncnc/`, payload.data)
-}
-function api_v1_hncnc_retrieve(payload) {
-  return rtyvndevAPI.get(`/api/v1/hncnc/${payload.id}/`)
-}
-function api_v1_hncnc_update(payload) {
-  return rtyvndevAPI.put(`/api/v1/hncnc/${payload.id}/`, payload.data)
-}
-function api_v1_hncnc_partial_update(payload) {
-  return rtyvndevAPI.patch(`/api/v1/hncnc/${payload.id}/`, payload.data)
-}
-function api_v1_hncnc_destroy(payload) {
-  return rtyvndevAPI.delete(`/api/v1/hncnc/${payload.id}/`)
-}
 function api_v1_login_create(payload) {
   return rtyvndevAPI.post(`/api/v1/login/`, payload.data)
 }
@@ -85,12 +67,6 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
-  api_v1_hncnc_list,
-  api_v1_hncnc_create,
-  api_v1_hncnc_retrieve,
-  api_v1_hncnc_update,
-  api_v1_hncnc_partial_update,
-  api_v1_hncnc_destroy,
   api_v1_login_create,
   api_v1_sdft_list,
   api_v1_sdft_create,
