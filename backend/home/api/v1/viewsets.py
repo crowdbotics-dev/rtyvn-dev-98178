@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Sdft
-from .serializers import SdftSerializer
+from home.models import Hncnc,Sdft
+from .serializers import HncncSerializer,SdftSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class SdftViewSet(viewsets.ModelViewSet):
     serializer_class = SdftSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Sdft.objects.all()
+
+class HncncViewSet(viewsets.ModelViewSet):
+    serializer_class = HncncSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Hncnc.objects.all()

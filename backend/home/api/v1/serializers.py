@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Sdft
+from home.models import Hncnc,Sdft
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class SdftSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sdft
+        fields = "__all__"
+
+class HncncSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Hncnc
         fields = "__all__"

@@ -5,3 +5,6 @@ class Sdft(models.Model):
     cbdd = models.BigIntegerField(blank=True,)
     sdsfw = models.BigIntegerField(null=True,blank=True,)
     xvvss12 = models.BigIntegerField(null=True,blank=True,)
+class Hncnc(models.Model):
+    'Generated Model'
+    dhshd = models.BigIntegerField()
